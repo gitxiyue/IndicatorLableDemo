@@ -35,20 +35,11 @@
     return _indicatorColor;
 }
 
-- (AlignmentEnum)alignment {
+- (AlignmentEnum)indicatorAlign {
     if (!_indicatorAlign) {
         _indicatorAlign = RIGHT;
     }
     return _indicatorAlign;
-}
-
-- (instancetype)initWithFrame:(CGRect)frame title:(NSString*)text {
-    self = [super initWithFrame:frame];
-    if (self) {
-        titleStr = text;
-        [self setUpView];
-    }
-    return self;
 }
 
 - (instancetype)initWithFrame:(CGRect)frame
@@ -68,6 +59,7 @@
 - (void)setIndicatorImage:(UIImage *)image indicatorSize:(CGSize)size {
     _indicatorImage = image;
     _indicatorSize  = size;
+    [self setNeedsLayout];
 }
 
 - (void)setIndicatorColor:(UIColor *)color indicatorSize:(CGSize)size {
@@ -77,11 +69,13 @@
     }else {
         _indicatorSize = size;
     }
+    [self setNeedsLayout];
 }
 
 - (void)setTitleAlign:(NSTextAlignment)align1 indicatorAlign:(AlignmentEnum)align2 {
     _title.textAlignment = align1;
     _indicatorAlign = align2;
+    [self setNeedsLayout];
 }
 
 - (void)setUpView {
@@ -107,11 +101,6 @@
 }
 - (void)invoke:(id)sender {
     if (_block) _block(sender);
-}
-
-- (void)willMoveToSuperview:(UIView *)newSuperview {
-    [super willMoveToSuperview:newSuperview];
-    XunLog(@"willMoveToSuperview");
 }
 
 - (CGSize)sizeThatFits:(CGSize)size {

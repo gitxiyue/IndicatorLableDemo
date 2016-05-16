@@ -41,14 +41,13 @@
     lab12.backgroundColor = [UIColor orangeColor];
     [self.view addSubview:lab12];
     
+    
+    
+    
+    
     IndicatorLable *lab2 = [[IndicatorLable alloc]
                            initWithFrame:CGRectMake(0, 200, SCREEN_W-10, 30) title:@"你有你的天地4" titleSize:16 titleColor:[UIColor purpleColor]];
-    
-    
-    
-    
-    
-    
+
     lab2.title.textAlignment = NSTextAlignmentLeft;
     [lab2 setIndicatorColor:[UIColor blueColor] indicatorSize:CGSizeMake(7, 16)];
     lab2.backgroundColor = [UIColor orangeColor];
