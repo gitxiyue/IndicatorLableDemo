@@ -6,7 +6,6 @@
 ###封装了点击事件
 	
 	// - (void)addActionBlock:(void (^)(id sender))block
-	__weak IndicatorLable *weak_lab = lab;
     [lab addActionBlock:^(id sender) {
       //to do;
     }];
@@ -22,3 +21,5 @@
     [lab setIndicatorImage:[UIImage imageNamed:@"mini01.jpg"] indicatorSize:CGSizeMake(24, 24)];
     [lab setTitleAlign:NSTextAlignmentCenter indicatorAlign:CENTER];
     [self.view addSubview:lab];
+
+####更多用法看demo
