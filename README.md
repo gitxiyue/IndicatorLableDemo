@@ -1,7 +1,7 @@
 # IndicatorLableDemo
 带有指示器【图标】的的Lable
 
-![image](https://github.com/gitxiyue/IndicatorLableDemo/Screen1.png)
+![image](https://github.com/gitxiyue/IndicatorLableDemo/blob/master/Screen1.png)
 
 ###封装了点击事件
 	
