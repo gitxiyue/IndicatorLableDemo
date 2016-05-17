@@ -1,6 +1,24 @@
 # IndicatorLableDemo
 带有指示器【图标】的的Lable
-封装了点击事件：
-我不知道怎么上传图片，和插入代码
 
 ![image](https://github.com/gitxiyue/IndicatorLableDemo/屏幕快照 2016-05-15 18.50.58.png)
+
+###封装了点击事件
+	
+	// - (void)addActionBlock:(void (^)(id sender))block
+	__weak IndicatorLable *weak_lab = lab;
+    [lab addActionBlock:^(id sender) {
+      //to do;
+    }];
+
+
+
+###用法
+
+    IndicatorLable *lab = [[IndicatorLable alloc]
+                            initWithFrame:CGRectMake(0, 440, SCREEN_W, 30) 
+                            title:@"你有你的天地10" titleSize:16 
+                            titleColor:[UIColor purpleColor]];
+    [lab setIndicatorImage:[UIImage imageNamed:@"mini01.jpg"] indicatorSize:CGSizeMake(24, 24)];
+    [lab setTitleAlign:NSTextAlignmentCenter indicatorAlign:CENTER];
+    [self.view addSubview:lab];
